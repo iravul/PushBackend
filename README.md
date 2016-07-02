@@ -15,6 +15,14 @@ The project uses Codeigniter, MySQL but you can easily use it without Codeignite
 ### Version
 1.0
 
+
+### Future Tasks
+
+- Node.js and MongoDB support.
+- iOS and Android Demos
+- Optional push message service. Amazon SNS, GCM, APNS etc.
+
+
 ### Tech
 
 PushBackend project is a PHP project. It uses Amazon SNS for push notification service.
@@ -49,6 +57,8 @@ $config['push_arn_ios_dev']     = '';
 3- Create related tables from push-db.sql
 
 4- Enable authentication and logging from config/rest.php (optional)
+
+
 
 License
 ----
