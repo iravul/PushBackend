@@ -6,6 +6,8 @@ The project uses Codeigniter, MySQL but you can easily use it without Codeignite
 
 - Amazon SNS 
 - iOS, Android, Windows Phone and others
+- iOS Development, Distribution management
+- JSON, XML etc. formats supported (Detail:  [CodeIgniter Rest Server])
 - Topic, User management
 - Send image, sound etc with push message
 ### Version
@@ -22,6 +24,26 @@ PushBackend uses some open source projects to work properly:
 * [AmazonSNS-PHP-API] - A lightweight PHP wrapper for the Amazon SNS API
 * [CodeIgniter Rest Server] - A fully RESTful server implementation for CodeIgniter using one library, one config file and one controller.
 
+
+### Usage
+
+1- Add Access Key, Client Secret, Region to config/site_settings.php. How to get AWS Credentials: http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html
+```php
+$config['aws_accesskey']        = 'XXXXXXXX';
+$config['aws_secretkey']        = 'XXXXXXXX';
+$config['aws_region']           = 'eu-west-1';
+```
+
+2- Add your application ARN's to config/site_settings.php. How to get Application ARN from Amazon SNS: http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html
+```php
+$config['push_arn_android']     = '';
+$config['push_arn_ios_pro']     = '';
+$config['push_arn_ios_dev']     = '';
+```
+
+3- Create related tables from push-db.sql
+
+4- Enable authentication and logging from config/rest.php (optional)
 
 License
 ----
