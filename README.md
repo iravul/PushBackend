@@ -26,6 +26,9 @@ PushBackend uses some open source projects to work properly:
 * [AmazonSNS-PHP-API] - A lightweight PHP wrapper for the Amazon SNS API
 * [CodeIgniter Rest Server] - A fully RESTful server implementation for CodeIgniter using one library, one config file and one controller.
 
+### Flow of token adding, updating and removing
+
+![TokenFlow](http://iravul.com/push/upload/TokenGeneration.png)
 
 ### Usage
 
