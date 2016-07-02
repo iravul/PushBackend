@@ -58,7 +58,38 @@ $config['push_arn_ios_dev']     = '';
 
 4- Enable authentication and logging from config/rest.php (optional)
 
+5- Adding token (POST method, "iravul/1/setToken")
 
+| Parameter        | Description           | 
+| ------------- |:-------------:|
+|user_id   | user identifier of your project |  
+|token   | Apple device token, GCM token etc.  |  
+|token_type   | development, production  | 
+|device   | optional  | 
+|device_id   | optional for iOS, mandatory for Android  | 
+|osType   | ios, android  |  
+|osVersion   |  optional  |   
+|app_version   | optional  |  
+
+
+
+6- Removing token (POST method, "iravul/1/removeToken")
+
+| Parameter        | Description           | 
+| ------------- |:-------------:|
+|user_id   | user identifier of your project |  
+|token   | Apple device token, GCM token etc.  | 
+
+
+
+7- Send push message (POST method, "iravul/1/push")
+
+| Parameter        | Description           | 
+| ------------- |:-------------:|
+|user_id   | user identifier of your project |  
+|message   | should be max 200 char because of push message packet size limit  |  
+|type   | will be used for differentiate push type. you can send general message, image, sound or pool push messages. it will be differed by $type attribute.  |  
+|type_id   | you can get push detail with type_id and type values. then you make a request and get data.  |  
 
 License
 ----
